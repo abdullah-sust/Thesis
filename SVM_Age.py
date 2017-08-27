@@ -1,4 +1,4 @@
-#Individual Doc with Age & Sex
+# Not Individual Doc With  Age
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm, datasets
@@ -31,17 +31,11 @@ for col in data:
         count=1
         continue
     count+=1
-    if count==158:
+    if count==159:
         break
-#     post=col[5]+" "+col[6]+" "+col[7]+" "+col[8]+" "+col[9]+" "+col[10]+" "+col[11]+" "+col[12]+" "+col[13]+" "+col[14]
-#     trainData.append(post)
-    for i in range(10):
-        trainData.append(col[i+5])
-        if col[3]=='Female':
-            t=str(col[4])+"0"
-        else:
-            t=str(col[4])+"1"
-        trainTarget.append(int(t))
+    post=col[5]+" "+col[6]+" "+col[7]+" "+col[8]+" "+col[9]+" "+col[10]+" "+col[11]+" "+col[12]+" "+col[13]+" "+col[14]
+    trainData.append(post)
+    trainTarget.append(int(col[4]))
 
 vectorizer=TfidfVectorizer(use_idf=True, token_pattern='[^ \n,".\':()ঃ‘?’।“”!;a-zA-Z0-9#০১২৩৪৫৬৭৮৯*&_><+=%$-`~|^·]+') #০১২৩৪৫৬৭৮৯
 trainData=vectorizer.fit_transform(trainData)
@@ -58,8 +52,8 @@ for i in range(5):
     print(float(count2)/float(len(predicted2)))
 
 # Accuracy:
-# 0.34615384615384615
-# 0.3076923076923077
-# 0.2948717948717949
-# 0.24358974358974358
-# 0.34615384615384615
+# 0.125
+# 0.125
+# 0.25
+# 0.25
+# 0.125
