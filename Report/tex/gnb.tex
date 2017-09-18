@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{standalone}
+
+\begin{document}
+\section{Gaussian Naive Bias}
+Gaussian Naive Bayes is a simple probabilistic classifier that uses Bayes theorem with independent assumptions between the features to classify data. 
+Let, the classifier has m elements which is denoted with X ={X\textsubscript{1}, X\textsubscript{2}, ... , X\textsubscript{m}} and n classes which is denoted with C = {c\textsubscript{1}, c\textsubscript{2}, ... , c\textsubscript{n}}.
+The Bayes theorem is stated in following equation,\\
+
+\begin{center}
+	\makebox  P(C\textsubscript{i} | X\textsubscript{j}) = $ \frac{P(X\textsubscript{j} | C\textsubscript{i}) * P (X\textsubscript{i})}{P(X\textsubscript{j})} $ \\
+\end{center}
+\\
+Here, \\
+C\textsubscript{i} = Denotes the class\\
+X\textsubscript{j} = Denotes a single featured element\\
+P(A | B) = Denotes the probability of observing A after B is observed.\\
+P(A) = Denotes the probability of  observing A\\ 
+For multiple feature the equation is changed to,\\
+
+\begin{center}
+	\makebox  P(C\textsubscript{i} | x\textsubscript{1},x\textsubscript{2},x\textsubscript{3}, ... , x\textsubscript{n}) =$ \frac{P(x\textsubscript{1} | C\textsubscript{i}) * P(x\textsubscript{2} | C\textsubscript{i}) * ... * P(x\textsubscript{n} | C\textsubscript{i})}{P(X\textsubscript{j})} $ \\
+\end{center}
+\\
+Here, \\
+x\textsubscript{1},x\textsubscript{2},x\textsubscript{3}, ... , x\textsubscript{n} are features of X\textsubscript{j}.\\
+Gaussian Naive Bayes is really fragile to over fitting without any regularization assumption. Also, it is based on naive assumptions that re not generally concordant with the data.
+
+\end{document}

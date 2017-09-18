@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{standalone}
+
+\begin{document}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\begin{tabular}[c]{@{}c@{}}Category\\ \end{tabular} & \begin{tabular}[c]{@{}c@{}}Accuracy\\ (\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Decision\\ \end{tabular} \\ \hline
+		 Age & 100\% &  Overfitted\\ \hline
+		 Sex & 100\% &  Overfitted\\ \hline
+		 Religion & 100\% & Overfitted \\ \hline
+	\end{tabular}
+	\caption{ Accuracy of Neural Network.}
+	\label{tab:error5}
+\end{table}
+
+\subsection{Experiment with Neural Network}
+Neural Network consists of input node, output node, activation function, hidden layer default 1, each layer connected with edge weight. Weight is updated in each iteration. In our model we used 1 hidden layer with 3000 hidden unit. Train our neural network for 200 iterations. As we stated before to use neural network with best performance we need a huge amount of data set. That's why in every case of our training we got accuracy with 100\% which we can easily say that our model is biased. We also trained our neural network for different activation functions like relu, identity, logistic and tanh. In every case we got bad performance  and we took decision that our model is biased.
+
+\end{document}

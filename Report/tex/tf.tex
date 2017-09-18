@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{standalone}
+
+\begin{document}
+\section{Term Frequency}
+
+Tf means term-frequency. Term frequency defines by tf(t,d). The easiest way is to use the actual count of a term t in a document for example, if the number of times that a term t occurs in document d and if we denote the actual count by (ft,d), then the simplest term frequency scheme is: 
+
+\begin{center}
+	\makebox  tf(t,d) = (f\textsubscript{t,d}) \\
+\end{center}
+
+\section{Inverse Document Frequency}
+Idf means inverse document-frequency. It denotes number of times of a term t that contains in a given document is multiplied with idf. There are several formula to calculate idf. They are slightly different from each other. Below is one of them:  
+
+\begin{center}
+	\makebox  idf(t)=\log \frac{n\textsubscript{d}}{1+df(d,t)} \\
+\end{center}
+
+
+Here total number of documents is denoted by n\textsubscript{d} and \text{df}(d,t) is denoting the number of documents that contains the term t. The tf-idf vectors are then normalized by the below Euclidean norm:
+
+\begin{center}
+	\makebox  v_{norm} = \frac{v}{||v||^{2}} = \frac{v}{\sqrt{v\textsubscript{1}^2 +v\textsubscript{2}^{2} + \dots + v\textsubscript{n}^{2}}} \\
+\end{center}
+\section{Term Frequency Inverse Document Frequency}
+As we defined before the definition of tf-idf. To calculate tf-idf of a given corpus we need to calculate tf and idf individually and multiplied both. Simple formula of tf-idf calculation is: 
+
+\begin{center}
+	\makebox  \text{ tf-idf(t,d)}=\text{tf(t,d)} \times \text{idf(t)} \\
+\end{center}
+
+
+We can calculate idf in several way though they are slightly different from each other as stated before.
+TfidfTransformer and TfidfVectorizer. We used TfidfVectorizer in our experiment.
+
+% \subsection{TfidfVectorizer}
+\end{document}

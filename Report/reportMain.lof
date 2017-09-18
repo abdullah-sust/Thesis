@@ -1,0 +1,21 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Groups vs Personality (percentile)\relax }}{4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Likes vs Personality (percentile)\relax }}{5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \% Profiles in different age range\relax }}{6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The relative influence of each feature in Gradient Boosting Machine (GBM)\relax }}{7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Basic Support Vector Machine\relax }}{10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Basic Linear Regression\relax }}{11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Basic Logistic Regression\relax }}{12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Basic Artificial Neural Network\relax }}{13}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Users ratio according to Age\relax }}{16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Users ratio according to Sex\relax }}{17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Users ratio according to Religion\relax }}{17}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Performance diagram of Naive Bayes algorithm.\relax }}{19}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Performance diagram with SVM\relax }}{20}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Performance diagram of all classification algorithm on Religion.\relax }}{22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Performance diagram of all classification algorithm on Age.\relax }}{23}
+\addvspace {10\p@ }

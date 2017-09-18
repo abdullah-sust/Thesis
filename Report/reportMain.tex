@@ -1,0 +1,128 @@
+\documentclass[a4paper,oneside,11pt]{report}
+
+\usepackage{mystyle}
+\begin{document}
+\pagenumbering{Alph}
+\pagestyle{empty}
+\input{./tex/frontpages}
+\pagestyle{plain}
+\clearpage\pagenumbering{Roman}
+\addcontentsline{toc}{section}{Abstract}
+\input{./tex/abstract}
+\clearpage
+\addcontentsline{toc}{section}{Acknowledgement}
+\input{./tex/acknowledgements}
+\clearpage
+\addcontentsline{toc}{section}{Dedication}
+\input{./tex/dedication}
+\clearpage
+
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+\clearpage
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\clearpage
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+\clearpage\pagenumbering{arabic}
+\input{./tex/introduction} %includes background
+\input{./tex/motivation}
+\input{./tex/background_study} % includes intro of liturature review
+
+\input{./tex/Methodology}
+\input{./tex/tf}
+\input{./tex/gnb}
+\input{./tex/svm}
+\input{./tex/li_r}
+\input{./tex/lo_r}
+\input{./tex/nn}
+\input{./tex/d_s}
+\input{./tex/d_c}
+\input{./tex/d_f}
+\input{./tex/e_r}
+\input{./tex/e}
+\input{./tex/e_r_gnb}
+\input{./tex/e_r_svm}
+\input{./tex/e_r_lir}
+\input{./tex/e_r_lor}
+\input{./tex/e_r_nn}
+\input{./tex/comparison}
+\input{./tex/dicussion}
+\input{./tex/conclusion}
+\input{./tex/future_work}
+\clearpage
+\renewcommand\bibname{References}
+\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,4_2_refs}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{latexcompanion} 
+B. F. Marko Tkalcic and M. Schedl. 
+\textit{Personality traits and the relationship with (non-) disclosure behavior on Facebook}. 
+Proceedings of the 25th International Conference Companion on World Wide Web, pp. 565–568, 2016. [Online]. Available: 
+\\\texttt{http://dl.acm.org/citation.cfm?id=2890085}
+
+\bibitem{latexcompanion} 
+L. S. Alan Menk. 
+\textit{Predicting the human curiosity from users profiles on Facebook}. 
+Proceedings of the 4th Spanish Conference on Information Retrieval Article No. 13, 2016. [Online]. Available: 
+\\\texttt{http://dl.acm.org/citation.cfm?id=2934743}
+
+\bibitem{latexcompanion} 
+T. G. P. K. Yoram Bachrach, Michal Kosinski and D. Stillwell.
+\textit{Personality and patterns of Facebook usage}. 
+Proceedings of the 4th Annual ACM Web Science Conference, pp. 24–32, 2012. [Online]. Available:
+\\\texttt{http://dl.acm.org/citation.cfm?id=2380722}
+
+\bibitem{latexcompanion} 
+A. C. Reza Farahbakhsh, Xiao Han and N. Crespi. 
+\textit{Analysis of publicly disclosed information in Facebook profiles}. 
+Advances in Social Networks Analysis and Mining (ASONAM), 2013 IEEE/ACM International Conference, 2013. [Online]. Available:
+\\\texttt{http://ieeexplore.ieee.org/document/6785779/}
+
+\bibitem{latexcompanion} 
+S. P. Thomas Theodoridis and Y. Kompatsiaris. 
+\textit{Assessing the reliability of Facebook user profiling}. 
+Proceedings of the 24th International Conference on World Wide Web, pp. 129–130, 2015. [Online]. Available:
+\\\texttt{http://dl.acm.org/citation.cfm?id=2742728}
+
+\bibitem{latexcompanion} 
+Zhenhui Li, Ding Zhou, Yun-Fang Juan and Jiawei Han. 
+\textit{Keyword Extraction for Social Snippets}. 
+Proceedings of the 19th international conference on World wide web, pp. 1143-1144 , 2010. [Online]. Available:
+\\\texttt{http://dl.acm.org/citation.cfm?id=1772845}
+
+\bibitem{latexcompanion} 
+Aparna Garimella and Rada Mihalcea. 
+\textit{Zooming in on Gender Differences in Social Media}. 
+2016. [Online]. Available:
+\\\texttt{https://www.semanticscholar.org/paper/Zooming-in-on-Gender-Differences-in-Social-Media-Garimella-Mihalcea/753d714f9efe23ebb7996f276a10fe233c1ca741}
+
+\bibitem{latexcompanion} 
+Jennifer Golbeck, Cristina Robles and Karen Turner.
+\textit{Predicting Personality with Social Media}. 
+CHI '11 Extended Abstracts on Human Factors in Computing Systems, pp. 253-262, 2011. [Online]. Available:
+\\\texttt{https://www.semanticscholar.org/paper/Zooming-in-on-Gender-Differences-in-Social-Media-Garimella-Mihalcea/753d714f9efe23ebb7996f276a10fe233c1ca741}
+
+\bibitem{latexcompanion} 
+Yin Zhu, Erheng Zhong, Sinno Jialin Pan, Xiao Wang, Minzhe Zhou and Jiawei Han. 
+\textit{Predicting user activity level in social networks}. 
+Proceedings of the 22nd ACM international conference on Information & Knowledge Management, pp. 159-16, 2013. [Online]. Available:
+\\\texttt{http://dl.acm.org/citation.cfm?id=2505518}
+
+\bibitem{latexcompanion} 
+Jalal S. Alowibdi, Ugo A. Buy and Philip Yu. 
+\textit{Language Independent Gender Classification on Twitter}. 
+Proceedings of the 2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining, pp. 739-743, 2013. [Online]. Available:
+\\\texttt{http://dl.acm.org/citation.cfm?id=2492632&CFID=983309617&CFTOKEN=98982289}
+
+\end{thebibliography}
+
+
+%\begin{appendices}
+	% \input{./tex/commands}
+%\end{appendices}
+\end{document}

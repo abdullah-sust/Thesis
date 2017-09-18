@@ -1,0 +1,33 @@
+\contentsline {section}{Abstract}{I}
+\contentsline {section}{Acknowledgement}{II}
+\contentsline {section}{Dedication}{III}
+\contentsline {section}{Table of Contents}{IV}
+\contentsline {section}{List of Tables}{VI}
+\contentsline {section}{List of Figures}{VII}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Motivation}{2}
+\contentsline {chapter}{\numberline {2}Background Study}{3}
+\contentsline {section}{\numberline {2.1}Literature Review}{3}
+\contentsline {chapter}{\numberline {3}Methodology}{8}
+\contentsline {section}{\numberline {3.1}Term Frequency}{8}
+\contentsline {section}{\numberline {3.2}Inverse Document Frequency}{8}
+\contentsline {section}{\numberline {3.3}Term Frequency Inverse Document Frequency}{9}
+\contentsline {section}{\numberline {3.4}Gaussian Naive Bias}{9}
+\contentsline {section}{\numberline {3.5}Support Vector Machine}{10}
+\contentsline {section}{\numberline {3.6}Linear Regression}{10}
+\contentsline {section}{\numberline {3.7}Logistic Regression}{12}
+\contentsline {section}{\numberline {3.8}Artificial Neural Network}{13}
+\contentsline {chapter}{\numberline {4}Data Set}{16}
+\contentsline {section}{\numberline {4.1}Data Collection}{16}
+\contentsline {section}{\numberline {4.2}Data Processing}{17}
+\contentsline {chapter}{\numberline {5}Experimental Result and Analysis}{18}
+\contentsline {section}{\numberline {5.1}Experiment}{18}
+\contentsline {subsection}{\numberline {5.1.1}Experiment with Gaussian Naive Bayes}{18}
+\contentsline {subsection}{\numberline {5.1.2}Experiment with SVM}{19}
+\contentsline {subsection}{\numberline {5.1.3}Experiment with Linear Regression and Result}{20}
+\contentsline {subsection}{\numberline {5.1.4}Experiment with Logistic Regression}{21}
+\contentsline {subsection}{\numberline {5.1.5}Experiment with Neural Network}{21}
+\contentsline {section}{\numberline {5.2}Comparison and Analysis}{22}
+\contentsline {section}{\numberline {5.3}Discussion}{23}
+\contentsline {chapter}{\numberline {6}Conclusion}{24}
+\contentsline {section}{\numberline {6.1}Future Scopes}{24}
