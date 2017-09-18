@@ -1,5 +1,3 @@
-# Naive Bayes
-
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm, datasets
@@ -36,20 +34,39 @@ for col in data:
         break
     post=col[5]+" "+col[6]+" "+col[7]+" "+col[8]+" "+col[9]+" "+col[10]+" "+col[11]+" "+col[12]+" "+col[13]+" "+col[14]
     trainData.append(post)
-    if col[3]=='Female':
-        trainTarget.append(0)
-    else:
-        trainTarget.append(1)
+    # if col[3]=='Female':
+    #     trainTarget.append(0)
+    # else:
+    #     trainTarget.append(1)
+    t=""
+    if col[15]=="Muslim":
+        t+="1"
+    elif col[15]=="Hindu":
+        t+="2"
+    elif col[15]=="Buddha":
+        t+="3"
+    elif col[15]=="Christian":
+        t+="4"
+    trainTarget.append(int(t))
+
 
 vectorizer=TfidfVectorizer(use_idf=True, token_pattern='[^ \n,".\':()ঃ‘?’।“”!;a-zA-Z0-9#০১২৩৪৫৬৭৮৯*&_><+=%$-`~|^·]+') #০১২৩৪৫৬৭৮৯
 trainData=vectorizer.fit_transform(trainData)
 features=vectorizer.get_feature_names()
-trainData=trainData.toarray()
-clf= MultinomialNB()
-clf.fit(trainData,trainTarget)
+model = svm.SVC(kernel='linear', C=1, gamma=1)
 for i in range(5):
     x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
-    acuracy= clf.score(x_test,y_test)
-    print("Acuracy is: ",acuracy,"\n")
+    model.fit(x_train, y_train)
+    predicted2 = model.predict(x_test)
+    count2 = 0
+    for i in range(len(predicted2)):
+        if (predicted2[i]-y_test[i])==0:
+            count2 += 1
+    print(float(count2)/float(len(predicted2)))
 
-# Acuracy is:  94.54
+# Accuracy:
+# 0.7272727272727273
+# 0.6181818181818182
+# 0.5454545454545454
+# 0.6363636363636364
+# 0.7636363636363637

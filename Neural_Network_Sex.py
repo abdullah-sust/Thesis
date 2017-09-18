@@ -35,19 +35,12 @@ for col in data:
         count=1
         continue
     count+=1
-    if count==158:
+    if count==185:
         break
     post=col[5]+" "+col[6]+" "+col[7]+" "+col[8]+" "+col[9]+" "+col[10]+" "+col[11]+" "+col[12]+" "+col[13]+" "+col[14]
     trainData.append(post)
     t=""
-    if col[15]=="Muslim":
-        t+="1"
-    elif col[15]=="Hindu":
-        t+="2"
-    elif col[15]=="Buddha":
-        t+="3"
-    elif col[15]=="Christian":
-        t+="4"
+    
     if col[3]=='Female':
         t+="0"
     else:
@@ -59,7 +52,17 @@ trainData=vectorizer.fit_transform(trainData)
 features=vectorizer.get_feature_names()
 trainData=trainData.toarray()
 # clf= MultinomialNB()
-# clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='identity',  max_iter=200)
+clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='identity',  max_iter=200)
+clf.fit(trainData,trainTarget)
+
+print(trainData.shape)
+
+for i in range(5):
+    x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
+    acuracy= clf.score(x_test,y_test)
+    print("Accuracy is: ",acuracy,"\n")
+print("------------------\n")
+# Accuracy is:  1.0
 clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='relu',  max_iter=200)
 clf.fit(trainData,trainTarget)
 
@@ -69,13 +72,29 @@ for i in range(5):
     x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
     acuracy= clf.score(x_test,y_test)
     print("Accuracy is: ",acuracy,"\n")
+print("------------------\n")
+# Accuracy is:  1.0
+clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='tanh',  max_iter=200)
+clf.fit(trainData,trainTarget)
 
-# Acuracy is:  0.659574468085
+print(trainData.shape)
 
-# Acuracy is:  0.723404255319
+for i in range(5):
+    x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
+    acuracy= clf.score(x_test,y_test)
+    print("Accuracy is: ",acuracy,"\n")
+print("------------------\n")
+# Accuracy is:  1.0 logistic
+clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='logistic',  max_iter=200)
+clf.fit(trainData,trainTarget)
 
-# Acuracy is:  0.787234042553
+print(trainData.shape)
 
-# Acuracy is:  0.851063829787
+for i in range(5):
+    x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
+    acuracy= clf.score(x_test,y_test)
+    print("Accuracy is: ",acuracy,"\n")
+print("------------------\n")
+# Accuracy is:  1.0
 
-# Acuracy is:  0.595744680851
+

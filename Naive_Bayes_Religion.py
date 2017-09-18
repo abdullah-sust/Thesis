@@ -31,7 +31,7 @@ for col in data:
         count=1
         continue
     count+=1
-    if count==158:
+    if count==185:
         break
     post=col[5]+" "+col[6]+" "+col[7]+" "+col[8]+" "+col[9]+" "+col[10]+" "+col[11]+" "+col[12]+" "+col[13]+" "+col[14]
     trainData.append(post)
@@ -56,12 +56,4 @@ for i in range(5):
     acuracy= clf.score(x_test,y_test)
     print("Acuracy is: ",acuracy,"\n")
 
-# Acuracy is:  0.659574468085
-
-# Acuracy is:  0.723404255319
-
-# Acuracy is:  0.787234042553
-
-# Acuracy is:  0.851063829787
-
-# Acuracy is:  0.595744680851
+# Acuracy is:  78.18
