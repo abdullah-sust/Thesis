@@ -1,0 +1,37 @@
+Analysis:
+---------
+Analysis folder exists all the code of our implementation with different classification algorithm like SVM, Naive Bayes, Neural Network, Linear Regression and Logistic Regression. We used [sklearn] for help. In every file, we tried to comment to understand well. But if you have any code related problem, just knock me in mail: abdullahalawal177@gmail.com
+
+Report:
+-------
+In our report section we explained our whole process and their performance in "reportMain.pdf" file. "img" folder also contains all figure that we have added in our "reportMain.pdf" file. "refPaper" folder contains some reference paper that we studied for our work.
+
+Slide:
+------
+Slide folder contains our slide, we presented on 19th Sep, 2017 as our final year thesis work presentation in front of all of our teachers and students.
+
+About us:
+---------
+
+We performed this work as our thesis work for course code: CSE 408.
+
+	#Supervisor:
+		#Name: Md. Saiful Islam Khan
+		#Mail: saiful-cse@sust.edu
+		#Designation: Assistant Professor
+		#Dept: Department of Computer Science and Engineering
+		#University: Shahjalal University of Science and Technology, Sylhet, Bangladesh.
+			
+	#Student1:
+		#Name: Md. Abdullah Al Awal
+		#Mail: abdullahalawal177@gmail.com
+		#Reg: 2012331055
+		#Dept: Department of Computer Science and Engineering
+		#University: Shahjalal University of Science and Technology, Sylhet, Bangladesh.
+
+	#Student2:
+		#Name: Farzad Bin Fazle
+		#Mail: md.farzad112@gmail.com
+		#Reg: 2012331005
+		#Dept: Department of Computer Science and Engineering
+		#University: Shahjalal University of Science and Technology, Sylhet, Bangladesh.

@@ -1,4 +1,4 @@
-
+#Analysis with Age using Logistic Regression
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm, datasets
@@ -23,11 +23,13 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 from sklearn import linear_model
 from sklearn.neural_network import MLPClassifier
-
+# Initializing Training and Target data array
 trainData =[]
 trainTarget=[]
 fileName="Facebook posts.csv"
+# Openning the data set file
 file = open(fileName, "r",encoding="utf8")
+# Reading the data set file
 data = csv.reader(file)
 count =0
 for col in data:
@@ -59,14 +61,15 @@ for col in data:
         t=25
     
     trainTarget.append(int(t))
-
+# Creating input feature vector using TfidfVectorizer
 vectorizer=TfidfVectorizer(use_idf=True,  max_features=6000 ,token_pattern='[^ \n,".\':()ঃ‘?’।“”!;a-zA-Z0-9#০১২৩৪৫৬৭৮৯*&_><+=%$-`~|^·]+') #০১২৩৪৫৬৭৮৯
 trainData=vectorizer.fit_transform(trainData)
 features=vectorizer.get_feature_names()
 trainData=trainData.toarray()
-# clf= MultinomialNB()
-# clf = MLPClassifier(hidden_layer_sizes=(3000, ), activation='identity',  max_iter=200)
+
+# Initializing the Logistic Regression model
 clf = LogisticRegression(C=1e5)
+# Fitting Logistic Regression model with trainData and trainTarget
 clf.fit(trainData,trainTarget)
 
 print(trainData.shape)
@@ -85,3 +88,5 @@ for i in range(5):
 # Accuracy is:  1.0
 
 # Accuracy is:  1.0
+
+# Decision: Due to lack of data set our model overfitted

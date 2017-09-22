@@ -1,4 +1,4 @@
-
+#Analysis with Religion & Sex using Naive Bayes
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm, datasets
@@ -20,10 +20,13 @@ from sklearn.cross_validation import train_test_split
 from sklearn.datasets import make_multilabel_classification
 from sklearn.multiclass import OneVsRestClassifier
 
+# Initializing Training and Target data array
 trainData =[]
 trainTarget=[]
 fileName="Facebook posts.csv"
+# Openning the data set file
 file = open(fileName, "r",encoding="utf8")
+# Reading the data set file
 data = csv.reader(file)
 count =0
 for col in data:
@@ -50,16 +53,23 @@ for col in data:
         t+="1"
     trainTarget.append(int(t))
 
+# Creating input feature vector using TfidfVectorizer
 vectorizer=TfidfVectorizer(use_idf=True, token_pattern='[^ \n,".\':()ঃ‘?’।“”!;a-zA-Z0-9#০১২৩৪৫৬৭৮৯*&_><+=%$-`~|^·]+') #০১২৩৪৫৬৭৮৯
 trainData=vectorizer.fit_transform(trainData)
 features=vectorizer.get_feature_names()
 trainData=trainData.toarray()
+
+# Initializing the Multinomial Naive Bayes model
 clf= MultinomialNB()
+# Fitting  Multinomial Naive Bayes model with trainData and trainTarget
 clf.fit(trainData,trainTarget)
 
+# Analyzing with 5 iteration
 for i in range(5):
     x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
     acuracy= clf.score(x_test,y_test)
     print("Accuracy is: ",acuracy,"\n")
 
 # Acuracy is:  58.18
+
+# Decision: Due to maximum number of class and lowest data set our classifier can't classify well that's our accuracy was low.

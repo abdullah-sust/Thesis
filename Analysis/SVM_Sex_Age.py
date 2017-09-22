@@ -1,4 +1,4 @@
-#Individual Doc with Age & Sex
+#Analysis with Age & Sex using Support Vector Machine
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm, datasets
@@ -20,10 +20,13 @@ from sklearn.cross_validation import train_test_split
 from sklearn.datasets import make_multilabel_classification
 from sklearn.multiclass import OneVsRestClassifier
 
+# Initializing Training and Target data array
 trainData =[]
 trainTarget=[]
 fileName="Facebook posts.csv"
+# Openning the data set file
 file = open(fileName, "r",encoding="utf8")
+# Reading the data set file
 data = csv.reader(file)
 count =0
 for col in data:
@@ -43,12 +46,18 @@ for col in data:
             t=str(col[4])+"1"
         trainTarget.append(int(t))
 
+# Creating input feature vector using TfidfVectorizer
 vectorizer=TfidfVectorizer(use_idf=True, token_pattern='[^ \n,".\':()ঃ‘?’।“”!;a-zA-Z0-9#০১২৩৪৫৬৭৮৯*&_><+=%$-`~|^·]+') #০১২৩৪৫৬৭৮৯
 trainData=vectorizer.fit_transform(trainData)
 features=vectorizer.get_feature_names()
+
+# Initializing the Support Vector Machine model
 model = svm.SVC(kernel='linear', C=1, gamma=1)
+
+# Analyzing with 5 iteration
 for i in range(5):
     x_train, x_test, y_train, y_test = train_test_split(trainData, trainTarget, test_size=0.3)
+    # Fitting Support Vector Machine model with trainData and trainTarget
     model.fit(x_train, y_train)
     predicted2 = model.predict(x_test)
     count2 = 0
@@ -63,3 +72,6 @@ for i in range(5):
 # 0.2948717948717949
 # 0.24358974358974358
 # 0.34615384615384615
+
+# Decision:
+# Due to lack of data set it was difficult for us to classify with our classifier. Further, SVM is a binary classifier. As, it performed bad for age class, it is bad practice to train with both age and sex features with lowest data set.
